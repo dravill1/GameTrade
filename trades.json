@@ -1,0 +1,133 @@
+[{
+  "_id": {
+    "$oid": "645d763a0c44f5e473284195"
+  },
+  "itemName": "Mario",
+  "category": "Video Game",
+  "details": "Mario is the main character and titular protagonist of the long-running and highly successful video game. It is played by a character named Mario who overcones obstacles and collect points.",
+  "gameCondition": "new",
+  "image": "https://www.hollywoodreporter.com/wp-content/uploads/2017/11/super-mario-game_copy_-_h_2017.jpg",
+  "requestedTradeItems": [],
+  "receivedTradeItems": [],
+  "status": "Available",
+  "author": {
+    "$oid": "645d747960fea963f7a975c8"
+  },
+  "createdAt": {
+    "$date": "2023-05-11T23:11:54.360Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-11T23:11:54.360Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645d769c0c44f5e473284198"
+  },
+  "itemName": "Monopoly",
+  "category": "Board Game",
+  "details": "Monopoly is a multi-player economics-themed board game. In the game, players roll two dice to move around the game board, buying and trading properties and developing them with houses and hotels",
+  "gameCondition": "average",
+  "image": "https://media.istockphoto.com/id/525878695/photo/monopoly-game-in-play-money-dice-pieces-and-cards.jpg?s=1024x1024&w=is&k=20&c=aSJCEqAtaVaK_cSFvyQFt9Wq-1SUhncVQtOiy7999dw=",
+  "requestedTradeItems": [],
+  "receivedTradeItems": [],
+  "status": "Available",
+  "author": {
+    "$oid": "645d747960fea963f7a975c8"
+  },
+  "createdAt": {
+    "$date": "2023-05-11T23:13:32.982Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-11T23:13:32.982Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645d76df0c44f5e47328419b"
+  },
+  "itemName": "Spider Man",
+  "category": "Video Game",
+  "details": "This game is played by the super man character, the Spider Man. As the game progesses, more levels are unlocked and more gadgets can be equipped.",
+  "gameCondition": "new",
+  "image": "https://lumiere-a.akamaihd.net/v1/images/sm_thumbnail_mysteriorush_960x540_9baec3f8.jpeg?region=0%2C0%2C960%2C540",
+  "requestedTradeItems": [],
+  "receivedTradeItems": [],
+  "status": "Available",
+  "author": {
+    "$oid": "645d747960fea963f7a975c8"
+  },
+  "createdAt": {
+    "$date": "2023-05-11T23:14:39.236Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-11T23:14:39.236Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645d777c0c44f5e4732841a2"
+  },
+  "itemName": "Scrabble",
+  "category": "Board Game",
+  "details": "Scrabble is a word game in which two to four players score points by placing tiles, each bearing a single letter, onto a game board divided into a 15×15 grid of squares.",
+  "gameCondition": "old",
+  "image": "https://www.wsgamecompany.com/media/catalog/product/cache/49f79b7e194e2a52dfbbad34b89ac33b/4/0/40005-1.jpg",
+  "requestedTradeItems": [],
+  "receivedTradeItems": [],
+  "status": "Available",
+  "author": {
+    "$oid": "645d748f60fea963f7a975ca"
+  },
+  "createdAt": {
+    "$date": "2023-05-11T23:17:16.231Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-11T23:17:16.231Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645d77b90c44f5e4732841a5"
+  },
+  "itemName": "Minecraft",
+  "category": "Video Game",
+  "details": "Everything you do in Minecraft stems from mining raw materials and then crafting them into something new",
+  "gameCondition": "average",
+  "image": "https://image.api.playstation.com/vulcan/img/cfn/11307uYG0CXzRuA9aryByTHYrQLFz-HVQ3VVl7aAysxK15HMpqjkAIcC_R5vdfZt52hAXQNHoYhSuoSq_46_MT_tDBcLu49I.png",
+  "requestedTradeItems": [],
+  "receivedTradeItems": [],
+  "status": "Available",
+  "author": {
+    "$oid": "645d748f60fea963f7a975ca"
+  },
+  "createdAt": {
+    "$date": "2023-05-11T23:18:17.213Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-11T23:18:17.213Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645d77fe0c44f5e4732841a8"
+  },
+  "itemName": "Chess",
+  "category": "Board Game",
+  "details": "Chess is an abstract strategy game and involves no hidden information. It is played on a chessboard with 64 squares arranged in an eight-by-eight grid.",
+  "gameCondition": "old",
+  "image": "https://images.ctfassets.net/3s5io6mnxfqz/wfAz3zUBbrcf1eSMLZi8u/c03ac28c778813bd72373644ee8b8b02/AdobeStock_364059453.jpeg",
+  "requestedTradeItems": [],
+  "receivedTradeItems": [],
+  "status": "Available",
+  "author": {
+    "$oid": "645d748f60fea963f7a975ca"
+  },
+  "createdAt": {
+    "$date": "2023-05-11T23:19:26.459Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-11T23:19:26.459Z"
+  },
+  "__v": 0
+}]

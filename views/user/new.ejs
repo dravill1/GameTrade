@@ -1,0 +1,26 @@
+<%-include('../partials/header.ejs')%> 
+<%console.log("DEEEBUGGGGG")%>
+<main>
+    <form action = "/users/new" method = "POST">
+        <div class="t">
+            <label for="firstName">First Name</label></td>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="t">
+            <label for="lastName">Last Name</label></td>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="t">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="t">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+        </div>
+        <input type="submit" value="Create Account">
+    </form>
+    
+</main> -->
+
+<%-include('../partials/footer.ejs')%>

@@ -1,0 +1,42 @@
+
+<%-include('./partials/header.ejs')%>
+<%console.log("xyz");%>
+<main>
+	<img class="monopoly" src="<%=item.image%>" alt="Monopoly">
+		<div class="ele">
+			<h1> <%=item.itemName%> </h1>
+			<br>
+			<h3>Game Condition : <%=item.gameCondition%> </h3>
+			<h2> DETAILS </h2>
+			<p> <%=item.details%></p>
+			<hr>
+			<%if(user == (item.author._id)){%>
+			<p>Update Trade</p>
+				<form>
+					<input type="submit" value="EDIT" formmethod="GET" formaction="/trades/<%=item.id%>/edit">
+				</form>
+			<hr>
+			<p>Remove Trade</p>
+				<form>
+					<input type="submit" value="DELETE" formmethod="POST" formaction="/trades/<%=item.id%>/delete?_method=DELETE"> 
+				</form>  
+			<%}
+			else{%>
+				<%if(watchFlag){%>
+               		 <form method="POST" action="/users/<%=item.id%>/watch"><input type="submit" value="WATCH" ></form>
+                <hr>
+                <%}else{%>
+                    <form method="POST" action="/users/<%=item.id%>/unwatch"><input type="submit" value="UNWATCH" ></form>
+                    <hr>
+                    
+                <%}
+                if(item.status=="Available"){%>
+                <form><input type="submit" value="TRADE" formmethod="GET" formaction="/trades/<%=item.id%>/listtradeitems"></form>
+                <hr>
+            <%}}%>
+
+		</div>
+</main>
+
+<%-include('./partials/footer.ejs')%>
+			

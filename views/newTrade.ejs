@@ -1,0 +1,32 @@
+
+<%-include('./partials/header.ejs')%>
+
+<main>
+			<form method="POST" action="/trades/new" >
+				<div class="for">
+					<label for="category">CATEGORY</label>
+					<input type="text" id="category" name="category" required>
+				</div>
+				<div class="for">
+					<label for="itemName">GAME NAME</label>
+					<input type="text" id="itemName" name="itemName" required>
+				</div>
+				<div class="for">
+					<label for="gameCondition">CONDITION </label>
+					<input type="text" id="gameCondition" name="gameCondition" required>
+				</div>
+				<div class="for">
+					<label for="details">DESCRIPTION </label>
+					<input type="text" id="details" name="details" required minlength="15">
+				</div>
+				<div class="for">
+					<label for="image">IMAGE LINK</label>
+					<input type="text" id="image" name="image" required>
+				</div>  
+				<div class="bot">
+				<input type="submit" value="CREATE TRADE">
+				</div>
+			</form>
+		</main>
+		
+<%-include('./partials/footer.ejs')%>

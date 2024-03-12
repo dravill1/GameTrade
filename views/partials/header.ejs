@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset="UTF-8">
+		<title>GAME TRADE</title>
+		<link href="/css/<%=cssfile%>" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<div class="reg">
+				<a href="/">
+					<img class="logo" src="https://s3-media0.fl.yelpcdn.com/bphoto/xco3amwazv1KVgIAtJvkRw/348s.jpg" alt="game trading">
+				</a>
+				<%if(!user){%>
+					<a href="/users/login" class="register">Login</a>
+					<a href="/users/new" class="register">Sign Up</a>
+				<%}
+				else{%>
+					<a href="/users/profile" class="register">Profile</a>
+					<a href="/users/logout" class="register">Logout</a>
+				<%}%>
+				<a href="/trades/new" class="register">Begin Trading</a>
+			</div>
+		</header>
+		<hr>
+		<nav><a href="/trades/list">Trades</a></nav>
+	
+		<%if(errorMessages.length>0){
+			errorMessages.forEach(message=>{%>
+				<div class='error'><%=message%></div>
+			<%})
+		}%>
+	
+		<%if(successMessages.length>0){
+			successMessages.forEach(message=>{%>
+				<div class='success'><%=message%></div>
+			<%})
+		}%>

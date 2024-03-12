@@ -1,0 +1,20 @@
+<%- include('./partials/header.ejs')%>
+
+<main>
+
+    <%if(items.length === 0){%><h2>There are no available trades in your profile</h2> <%}
+     else{%> <h2>select one game from your list for trading</h2>
+
+        
+    <form action="/trades/<%=item_id%>/generateTrade" method="POST">
+        <% items.forEach(item =>{%>
+            <input type="radio" name="itemToTrade" value=<%=item._id%>>
+            <label><%=item.itemName%></label>
+          <a href="/trades/<%=item.id%>"><img src="<%=item.image%>" ></a>
+        <%})%>
+        <input type="submit" value="Submit Trade Request">
+    </form><%}%>
+
+</main>
+    
+<%- include('./partials/footer.ejs')%>

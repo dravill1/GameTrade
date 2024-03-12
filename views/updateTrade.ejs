@@ -1,0 +1,28 @@
+
+<%-include('./partials/header.ejs')%>
+
+<main>
+        <form method="POST" action="/trades/<%=items.id%>?_method=PUT">
+				<div class="for">
+					<label for="category">CATEGORY</label>
+					<input type="text" id="category" name="category" value="<%=items.category%>" required>
+				</div>
+				<div class="for">
+					<label for="itemName">GAME NAME</label>
+					<input type="text" id="itemName" name="itemName" value="<%=items.itemName%>" required>
+				</div>
+				<div class="for">
+					<label for="gameCondition">CONDITION </label>
+					<input type="text" id="gameCondition" name="gameCondition" value="<%=items.gameCondition%>"required>
+				</div>
+				<div class="for">
+					<label for="details">DESCRIPTION </label>
+					<input type="text" id="details" name="details" value="<%=items.details%>"required minlength="15">
+				</div>
+				<div class="bot">
+				<input type="submit" value="UPDATE TRADE">
+				</div>
+			</form>
+		</main>
+		
+<%-include('./partials/footer.ejs')%>

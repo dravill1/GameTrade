@@ -1,0 +1,36 @@
+<%-include('./partials/header.ejs')%>
+
+<main class="tradesMain">
+ <%
+ console.log("inside if");
+ let categories = [];
+ items.forEach(item => 
+ {
+	if(categories.includes(item.category)==false){
+      categories.push(item.category);
+   }
+})%>
+<div class="pic">
+ <%
+ for(let i=0;i<categories.length;i++)
+ {
+      let itemList = [];
+      items.forEach(item => {
+         if(item.category == categories[i]){
+            itemList.push(item)
+         }
+      });
+     %>
+         <h3><%=categories[i]%></h3>
+         <% itemList.forEach(temp =>{%>
+         <div class="imgs"><a href="/trades/<%=temp.id%>"><img src="<%=temp.image%>" alt="No image"></a></div>
+    <%})
+ }%>
+</div>
+ <%if(items.length === 0){%>
+    <h3>There are currently no trades to display</h3>
+ <%}%>
+</main>
+
+
+<%-include('./partials/footer.ejs')%>

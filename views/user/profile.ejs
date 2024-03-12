@@ -1,0 +1,109 @@
+<%- include('../partials/header.ejs')%>
+<main>
+<div class="content">
+  <h2>Welcome, <%= user.firstName %></h2>
+    <h3>YOUR TRADES</h3>
+    <%if(items.length == 0){%>
+      <p>You don't have any trades currently</p>
+    <%} else {%>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% items.forEach(item => { %>
+        <tr>
+          <td>
+            <a href='/trades/<%= item.id %>'>
+              <%= item.itemName %>
+            </a>
+          </td>
+          <td>
+            <%= item.category %>
+          </td>
+          <td>
+            <%= item.status %>
+          </td>
+          <td>
+            <form>
+              <button type="submit" formmethod="GET" formaction="/trades/<%= item.id %>/edit">Edit</button>
+              <button type="submit" formmethod="POST" formaction="/trades/<%= item.id %>/delete?_method=DELETE">Delete</button>
+              <%if((item.status=="Offer pending")&&(item.requestedTradeItems.length>0||item.receivedTradeItems.length>0)){%>
+                <td> <button type="submit" formmethod="GET" formaction="/trades/<%= item.id %>/decideTrade">Manage Offer</td>
+                </tr>
+ 
+             <%}%></form>
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } %>
+    <br>
+  <h3> YOUR WATCHED TRADES</h3>
+    <%if(watchlist.length == 0){%>
+      <p>Your watchlist is empty</p>
+    <%} else {%>
+    <table>
+      <table>
+        <thead>
+          <tr>
+            <th>Game</th>
+            <th>Status</th>
+         </tr>
+        </thead>
+      <tbody>
+        <% watchlist.forEach(item => { %>
+        <tr>
+          <td>
+            <a href='/trades/<%= item.id %>'>
+              <%= item.itemName %>
+            </a>
+          </td>
+          <td>
+            <%= item.status %>
+          </td>
+          <td>
+            <form method="POST" action="/users/<%=item.id%>/unwatch"><input type="submit" value="UNWATCH" ></form>
+          </td>
+        </tr>
+        <% });} %>
+      </tbody>
+    </table>
+
+  <br>
+   <h3>YOUR OFFERS</h3>
+   <%if(items.length == 0){%>
+    <p>You don't have any offers currently</p>
+  <%} else {%>
+   <table>
+    <thead>
+      <tr>
+        <th>Requested Trade Item</th>
+        <th>Status</th>
+     </tr>
+    </thead>
+   <%
+  items.forEach(item=>{
+      if(item.requestedTradeItems.length>0){
+          item.requestedTradeItems.forEach(requestitem=>{if(nameOfItem[requestitem][1]=='Offer pending'){%>
+              <form method="POST" action="/trades/<%=item._id%>/<%=requestitem._id%>/cancel">
+                  <tr>
+                  <td><p><%=nameOfItem[requestitem][0]%></p></td>
+                  <td><p><%=nameOfItem[requestitem][1]%></p></td>
+                  <td><input type="submit" value="Cancel offer"></td>
+                  </tr>
+              </form>
+         <% }})
+      }
+  })}%>
+   </table>
+
+
+</div>
+</main>
+<%- include('../partials/footer.ejs')%>

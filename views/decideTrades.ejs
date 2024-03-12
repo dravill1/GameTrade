@@ -1,0 +1,39 @@
+<%- include('./partials/header.ejs')%>
+
+<main>
+    <%
+
+    reqOffers.forEach(i=>{%>
+            <table>
+            <form method="POST" action="/trades/<%=item.id%>/<%=i.id%>/cancel">
+                
+                <tr>
+                <td><h3><%=item.itemName%></h3></td>
+                <td><h3><%=i.itemName%></h3></td>
+                <td><input type="submit" value="Cancel"></td>
+                </tr>
+
+            </form>
+        <%})%>
+    </table>
+
+        <%
+        recOffers.forEach(i=>{%>
+            <table>
+                <form method="POST" action="/trades/<%=item.id%>/<%=i.id%>/accept">
+                    <tr>
+                    <td><h3><%=item.itemName%></h3></td>
+                    <td><h3><%=i.itemName%></h3></td>
+                    <td><input type="submit" value="Accept"></td>
+                </form>
+                <form method="POST" action="/trades/<%=item.id%>/<%=i.id%>/reject">
+                    <td><input type="submit" value="Reject"></td>
+                </tr>
+                </form>  
+                
+                
+    </table>
+        <%})%>
+</main>
+
+<%- include('./partials/footer.ejs')%>
