@@ -1,5 +1,4 @@
 # trade_project
-This repository is the starting template for the course project for ITIS 5166. 
 
 The repository includes four files:
 
